@@ -1,0 +1,195 @@
+/* Claude Scraper — injected UI styles */
+
+#claude-scraper-root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  z-index: 2147483647;
+}
+
+/* --- Floating button --- */
+#claude-scraper-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2147483647;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #6b4fbb;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(107, 79, 187, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#claude-scraper-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(107, 79, 187, 0.5);
+}
+
+/* --- Panel --- */
+#claude-scraper-panel {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  z-index: 2147483647;
+  width: 380px;
+  max-height: 520px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#claude-scraper-panel.claude-scraper-hidden {
+  display: none;
+}
+
+/* Header */
+.cs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #6b4fbb;
+  color: #fff;
+}
+
+.cs-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.cs-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+/* Body */
+.cs-body {
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cs-label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #444;
+}
+
+.cs-label-small {
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cs-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.cs-textarea:focus {
+  outline: none;
+  border-color: #6b4fbb;
+  box-shadow: 0 0 0 2px rgba(107, 79, 187, 0.15);
+}
+
+.cs-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cs-select {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+  background: #fff;
+}
+
+/* Extract button */
+.cs-btn-extract {
+  padding: 10px;
+  background: #6b4fbb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cs-btn-extract:hover {
+  background: #5a3ea8;
+}
+
+.cs-btn-extract:disabled {
+  background: #aaa;
+  cursor: wait;
+}
+
+/* Status */
+.cs-status {
+  font-size: 12px;
+  min-height: 18px;
+}
+
+.cs-status-info { color: #6b4fbb; }
+.cs-status-error { color: #d32f2f; }
+.cs-status-success { color: #2e7d32; }
+
+/* Result */
+.cs-result {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;
+}
+
+/* Copy button */
+.cs-btn-copy {
+  padding: 6px 12px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.cs-btn-copy:hover {
+  background: #e8e8e8;
+}
